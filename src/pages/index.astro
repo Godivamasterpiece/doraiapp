@@ -1,4 +1,4 @@
----
+<!-- ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -8,4 +8,18 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<Welcome />
-</Layout>
+</Layout> -->
+
+---
+import SiteLayout from "../layouts/SiteLayout.astro"
+import { SignedIn, SignedOut } from '@clerk/astro/components'
+---
+
+<SiteLayout title="Clerk + Astro">
+  <SignedOut>
+    <p>Sign in to try Clerk out!</p>
+  </SignedOut>
+  <SignedIn>
+    <p>You are signed in!</p>
+  </SignedIn>
+</SiteLayout>
